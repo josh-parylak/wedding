@@ -1,0 +1,5 @@
+<section class="content-builder">
+    {% for block in entry.contentBuilder.all() %}
+        {% include '_content-builder/block-types/' ~ block.type %}
+    {% endfor %}
+</section>

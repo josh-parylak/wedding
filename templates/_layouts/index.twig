@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <title>Josh & Barbara's Wedding</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    {% import '_macros' as macros %}
+    <body>
+        <header>
+            <div class="page-header">
+                <div class="logo-block">
+                    <div class="ring-f">
+                        <div class="diamond"></div>
+                    </div>
+                    <div class="ring-m"></div>
+                </div>
+                <div class="header-title">
+                    <a href="/">Parylak Wedding</a>
+                    <button>#hashtag</button>
+                </div>
+            </div>
+            <nav id="main-menu">
+                {% set nav = navMenu.menuItems.all() %}
+                {% for item in nav %}
+                    <a class="nav-item {{ craft.app.request.getSegment(-1) == item.slug ? 'active' }}" href="{{item.url}}">{{item.title}}</a>
+                {% endfor %}
+            </nav>
+        </header>
+        <div id="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/js/main.js"></script>
+    </body>
+    <footer>
+        {% for col in nav|batch(3) %}
+        <div class="footer-menu">
+            {% for item in col %}
+                <a class="footer-nav-item" href="{{item.url}}">{{item.title}}</a>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </footer>
+</html>

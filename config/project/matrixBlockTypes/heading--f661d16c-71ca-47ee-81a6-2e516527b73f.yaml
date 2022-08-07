@@ -1,0 +1,173 @@
+field: 0e945f0d-08ea-4cd7-8fad-5c06abe512df # Content Builder
+fieldLayouts:
+  cf735371-ddfa-4d73-bab6-3ee6c6d13e50:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: cbd88d21-6c7e-4f0b-95f3-d924bbeda28a # Heading Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ace72957-a7e0-4342-8e61-38ac14a03285
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 80d22602-c51e-43fb-8fc1-7f1b75893575 # Heading Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3018b260-b7df-4248-b6e6-b7736fb86a38
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 368c2cee-5b8f-416d-81b8-84df2a611f67 # Heading Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22970a25-7414-4aa6-ab8f-ca49b626ad9b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b445331e-fd7a-47f2-a8e9-81b9c6309711
+        userCondition: null
+fields:
+  80d22602-c51e-43fb-8fc1-7f1b75893575: # Heading Alignment
+    columnSuffix: zvntodzj
+    contentColumnType: string
+    fieldGroup: null
+    handle: headingAlignment
+    instructions: null
+    name: 'Heading Alignment'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Right
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  368c2cee-5b8f-416d-81b8-84df2a611f67: # Heading Text
+    columnSuffix: dkwcezlh
+    contentColumnType: text
+    fieldGroup: null
+    handle: headingText
+    instructions: null
+    name: 'Heading Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cbd88d21-6c7e-4f0b-95f3-d924bbeda28a: # Heading Size
+    columnSuffix: ymyfptmy
+    contentColumnType: string
+    fieldGroup: null
+    handle: headingSize
+    instructions: null
+    name: 'Heading Size'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Heading 1'
+            -
+              - value
+              - h1
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Heading 2'
+            -
+              - value
+              - h2
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Heading 3'
+            -
+              - value
+              - h3
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Heading 4'
+            -
+              - value
+              - h4
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: heading
+name: Heading
+sortOrder: 4

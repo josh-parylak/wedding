@@ -1,0 +1,51 @@
+@import 'mixins';
+
+$primary: #353535;
+$secondary: #BBA14F;
+$light: #F9F9F9; 
+$accent: #AAA9AD;
+$black: rgba(0,0,0,1);
+$white: rgba(255,255,255,1);
+
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Poiret+One&family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+$serif: 'BhuTuka Expanded One', serif;
+$sans: 'Raleway', sans-serif;
+$sansAlt: 'Poiret One', sans-serif;
+
+html {
+    background-color: $light;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: $sansAlt;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: $sansAlt;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: $sansAlt;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.rte {
+    p {
+        font-family: $sans;
+        font-size: 1.25rem;
+    }
+}
+
+#container {
+    @include container;
+    margin: 2rem auto;
+}

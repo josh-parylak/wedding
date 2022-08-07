@@ -1,0 +1,105 @@
+{% import '_macros' as macros %}
+
+{% set inviteID = inviteID ?? '' %}
+{% set firstName = firstName ?? '' %}
+{% set lastName = lastName ?? '' %}
+
+<div class="form-wrapper">
+    <div class="icon-wrapper">
+        {{ macros.icons('mail') }}
+    </div>
+    <form id="rsvp-form" s-replace="#results" s-trigger="submit">
+        <p>Search for your invitation using either your invitation ID <i>or</i> your first and last name. If you are on a mobile device, you can scan the QR code on the invitation.</p>
+        <div class="input-row">
+            <label for="inviteID">Invitation ID</label>
+            <span class="instructions">This number is found on the bottom right corner on the front of your Invitation</span>
+            <input name="inviteID" id="inviteID" value="{{ inviteID }}"></input>
+        </div>
+        <hr>
+        <div class="input-row">
+            <label for="firstName">First Name</label>
+            <input name="firstName" id="firstName" value="{{firstName}}"></input>
+        </div>
+        <div class="input-row">
+            <label for="lastName">Last Name</label>
+            <input name="lastName" id="lastName" value="{{lastName}}"></input>
+        </div>
+        <div class="button-row">
+            <button onclick="this.form.reset();">Clear</button>
+            <input class="btn" type="submit"></input>
+        </div>
+    </form>
+</div>
+
+{% macro result(result) %}
+    <a href="{{result.url}}" class="result">
+        <div class="main">
+            <div class="col">
+                <h3>Invitation</h3>
+                <div class="guest">
+                    {{result.firstName}} {{result.lastName}}
+                </div>
+                {% if result.guestFirstName and result.guestLastName %}
+                    <div class="guest">
+                        {{result.guestFirstName}} {{result.guestLastName}}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col">
+                <h3>Guest{{ result.guestFirstName ? 's' }}</h3>
+                <table class="guests-by-age">
+                    <tr>
+                        <th>Age</th>
+                        <th>Invited</th>
+                        <th>Confirmed Attending</th>
+                    </tr>
+                    {% for row in result.guestNumbers %}
+                        <tr>
+                            <td>{{ row.guestsByAge }}</td>
+                            <td>{{ row.invited }}</td>
+                            <td>{{ row.confirmed }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="id">
+            <div class="label">Invitation ID:</div>
+            <div class="value">{{result.title}}</div>
+        </div>
+    </a>
+{% endmacro %}
+
+<div id="results">
+    {% if inviteID != '' %}
+        {% set result = craft.entries.title(inviteID).one() %}
+        {% if result %}
+            <h2>Results:</h2>
+            {{ _self.result(result) }}
+        {% else %}
+            <div class="no-results">
+                There are no results for that Invitation ID! Please check for typos and try again, or search by first and last name.
+            </div>
+        {% endif %}
+    {% elseif firstName != '' and lastName != '' %}
+        {#% set params = {'firstName':firstName} %}
+        {#% set params = params|merge({'firstName':firstName}) %}
+        {% set params = params|merge({'lastName':lastName}) %}
+        {% set params = params|merge({'guestFirstName':firstName}) %}
+        {% set params = params|merge({'guestLastName':lastName}) %#}
+        {% set results = craft.entries().firstName(firstName).lastName(lastName).all() %}
+        {% if not results %}
+            {% set results = craft.entries().guestFirstName(firstName).guestLastName(lastName).all() %}
+        {% endif %}
+        {% if results %}
+            <h2>Results:</h2>
+            {% for result in results %}
+                {{ _self.result(result) }}
+            {% endfor %}
+        {% else %}
+            <div class="no-results">
+                There are no results for that name! Please check for typos and try again, or search by the Invitation ID on your invite.
+            </div>
+        {% endif %}
+    {% endif %}
+</div>

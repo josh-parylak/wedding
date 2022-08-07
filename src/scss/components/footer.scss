@@ -1,0 +1,28 @@
+footer {
+    @include container-outer;
+    margin: 6rem auto 3rem;
+    display: flex;
+    gap: 2rem;
+    border-top: 2px solid $black;
+    padding-top: 1rem;
+
+    @media screen and (max-width: 1199px) {
+        padding: 1rem 5% 0;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        .footer-nav-item {
+            font-family: $sans;
+            text-decoration: none;
+            color: $black;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

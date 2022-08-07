@@ -1,0 +1,33 @@
+{% import '_macros' as macros %}
+
+{% macro imgSide(img, imageCaption) %}
+    <div class="img-side">
+        {% set square = {
+            mode: 'crop',
+            width: 800,
+            height: 800
+        } %}
+        <img class="portrait" src="{{ img.getUrl(square) }}" alt="{{img.alt}}">
+        {% if imageCaption %}
+            <div class="caption">
+                {{ imageCaption }}
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}
+{% macro rte(body) %}
+    <div class="text-block rte">
+        {{ body|raw }}
+    </div>
+{% endmacro %}
+
+<div class="imageText {{ block.imagePosition }}">
+    {% switch block.imagePosition %}
+        {% case 'left' %}
+            {{ _self.imgSide(block.image.one(), block.imageCaption ?? false )}}
+            {{ _self.rte(block.text)}}
+        {% case 'right' %}
+            {{ _self.rte(block.text)}}
+            {{ _self.imgSide(block.image.one(), block.imageCaption ?? false )}}
+    {% endswitch %}
+</div>

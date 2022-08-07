@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="gallery">
+    {% set trns = {
+        mode: 'crop',
+        width: 600,
+        height: 600,
+        position: 'top-center'
+    } %}
+    {% for img in block.images.all() %}
+        <a href="{{img.url}}" data-lightbox="gallery-{{block.id}}" data-title="{{img.alt}}" aria-label="{{img.alt ?? img.filename}}" class="gallery--item"><img src="{{img.getUrl(trns)}}" alt="{{img.alt}}"></a>
+    {% endfor %}
+</div>

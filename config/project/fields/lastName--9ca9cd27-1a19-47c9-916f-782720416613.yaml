@@ -1,0 +1,19 @@
+columnSuffix: pfbtiznt
+contentColumnType: text
+fieldGroup: b21c92b9-fd3d-4017-9cfc-7321a875b0c9 # Invitation
+handle: lastName
+instructions: null
+name: 'Last Name'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

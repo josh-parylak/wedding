@@ -1,0 +1,113 @@
+fieldLayouts:
+  a5c60c51-6319-415d-bf21-7a3a18cbdbc3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 2c01f7f4-83c0-4293-ad67-2a657fdffa92
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4f302a19-654e-48d4-9518-1ae2ccd57573 # First Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46c3927a-1f00-40d1-838f-7b166d09ff90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9ca9cd27-1a19-47c9-916f-782720416613 # Last Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 886dc34e-2d76-4876-8be8-d29015a615b0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\LineBreak
+            uid: d19bba30-5a4a-419f-ae98-7b68738c0e7e
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 11365751-5044-4261-ae59-9f4123f77100 # Guest First Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8fe9114e-437b-4014-be80-17d576c854e0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fed9fa65-5e19-4424-b2d3-c0b7c4b282fb # Guest Last Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3369419-f1f4-45eb-aaa5-d9a3e5dba207
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\LineBreak
+            uid: 2923a85e-7bd6-4e55-a893-6a1ff7df678b
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 1d591009-3c3b-4cfa-954b-096a1f1b3bf3 # Guest Numbers
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f7f0fc78-bca3-40be-b5b7-c0583fb45abf
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Primary Guests'
+        uid: 0a8044aa-f751-4a45-84e0-21d68d4a3d3e
+        userCondition: null
+handle: default
+hasTitleField: false
+name: Default
+section: 493f7db2-3530-4a7b-952e-283878e196ce # Invitations
+sortOrder: 1
+titleFormat: '{id}-{dateCreated|date(''U'')|slice(-3, 3)}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

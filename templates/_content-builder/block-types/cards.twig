@@ -1,0 +1,42 @@
+{% import '_macros' as macros %}
+{% set cards = block.cards.all() %}
+
+{% macro deco(img, icon, prof, birthday, soc) %}
+    <div class="deco">
+        <div class="portrait-wrapper">
+            <img class="portrait" src="{{img.url}}" alt="{{img.alt}}">
+        </div>
+        <div class="meta">
+            <div class="icon-wrapper">{{ macros.icons(icon) }}</div>
+            <div class="prof row">{{ prof }}</div>
+            <div class="birthday">{{birthday|date('F jS, Y')}}</div>
+            <div class="soc">
+                {% for row in soc %}
+                    <a class="network" href="/{{row.username}}" aria-label="{{row.network|capitalize}} - {{row.username}}">{{ macros.icons(row.network) }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+{% macro rte(name, body) %}
+    <div class="text-block rte">
+        <h2>{{name}}</h2>
+        {{ body|raw }}
+    </div>
+{% endmacro %}
+
+{% if cards %}
+    <div class="cards">
+        {% for card in cards %}
+            <div class="card {{loop.index is odd ? 'odd' : 'even' }}">
+                {% if loop.index is odd %}
+                    {{ _self.deco(card.portrait.one(), card.icon, card.profession, card.birthday, card.socialMedia)}}
+                    {{ _self.rte(card.cardName, card.body)}}
+                {% else %}
+                    {{ _self.rte(card.cardName, card.body)}}
+                    {{ _self.deco(card.portrait.one(), card.icon, card.profession, card.birthday, card.socialMedia )}}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

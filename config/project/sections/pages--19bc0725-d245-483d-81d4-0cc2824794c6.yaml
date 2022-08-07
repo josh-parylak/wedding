@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: Pages
+propagationMethod: all
+siteSettings:
+  e8ada950-6cd2-4961-9ab8-160d994fb6f7: # Wedding
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 984bc123-5ab1-48b4-9e0d-f1786d6842b0
+type: structure

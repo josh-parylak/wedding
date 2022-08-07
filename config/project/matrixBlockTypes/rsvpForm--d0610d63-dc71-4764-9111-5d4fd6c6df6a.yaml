@@ -1,0 +1,40 @@
+field: 0e945f0d-08ea-4cd7-8fad-5c06abe512df # Content Builder
+fieldLayouts:
+  edd5d47c-a2ef-48eb-ae2d-e5d87425a827:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: dd49ea8c-0213-42d0-9ce8-0fac81230730 # RSVP Form
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: af12eb46-b7f2-45f8-90bd-fcd926aceb0b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8506591b-ea78-4b52-ba5a-afe090d780d6
+        userCondition: null
+fields:
+  dd49ea8c-0213-42d0-9ce8-0fac81230730: # RSVP Form
+    columnSuffix: oqvcwbow
+    contentColumnType: string
+    fieldGroup: null
+    handle: rsvpForm
+    instructions: 'This section will display the RSVP Search form. '
+    name: 'RSVP Form'
+    searchable: false
+    settings:
+      style: tip
+      tip: 'This section will display the RSVP Search form. '
+    translationKeyFormat: null
+    translationMethod: none
+    type: carlcs\uielementfields\fields\UiTip
+handle: rsvpForm
+name: 'RSVP Form'
+sortOrder: 5

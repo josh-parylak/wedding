@@ -1,0 +1,359 @@
+field: 5836aa34-7573-4d5d-9b2f-0b6304f91187 # Add a Card
+fieldLayouts:
+  b88921e2-ff38-49d4-9e2d-3c9a6f8a520a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9ac9d3fa-2774-40a7-a34a-11dc096d303b # Portrait
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce50e723-375b-4c3c-a3c2-a524abbc092d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a851aec7-6100-4699-9194-adaed49b220a # Card Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dff5deff-71d7-4737-89b5-bd1e3a893055
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 861139bc-6749-4511-a7f1-40c4dc68e2d1 # Body
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7b097a75-fdc9-4e4a-8528-9edee795a1d0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1b163bc5-2ff8-434d-b9e0-d5efe913cbac # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b84b766-26fd-4507-a12e-13c3d675ee90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f714129d-9105-4558-9586-deeea539208e # Profession
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b99aaa8-bb70-4843-9e5c-7454e69aa0cf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4b622811-5251-4ce2-9bb2-d3c1f700cfda # Birthday
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ebba4da5-07bd-4cb9-b5fd-e73537a5876a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6d170b95-7f68-4066-8073-d154f9022323 # Social Media
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 418327b5-e71a-4282-b1d8-c1569b5d4618
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a7ada2e4-0d41-4f19-8f67-6f1a811ffe22
+        userCondition: null
+fields:
+  1b163bc5-2ff8-434d-b9e0-d5efe913cbac: # Icon
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: icon
+    instructions: null
+    name: Icon
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Code
+            -
+              - value
+              - code
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Book
+            -
+              - value
+              - book
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  4b622811-5251-4ce2-9bb2-d3c1f700cfda: # Birthday
+    columnSuffix: null
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: birthday
+    instructions: null
+    name: Birthday
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: 30
+      showDate: true
+      showTime: false
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  6d170b95-7f68-4066-8073-d154f9022323: # Social Media
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: socialMedia
+    instructions: null
+    name: 'Social Media'
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Network
+                -
+                  - handle
+                  - network
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - select
+                -
+                  - options
+                  -
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Twitter
+                        -
+                          - value
+                          - twitter
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Instagram
+                        -
+                          - value
+                          - instagram
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Facebook
+                        -
+                          - value
+                          - facebook
+                        -
+                          - default
+                          - false
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Username
+                -
+                  - handle
+                  - username
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col2
+              - twitter
+            -
+              - col1
+              - ''
+      maxRows: null
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  9ac9d3fa-2774-40a7-a34a-11dc096d303b: # Portrait
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: portrait
+    instructions: null
+    name: Portrait
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:f82491e5-98a1-400e-8a51-9558e2f03483' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:f82491e5-98a1-400e-8a51-9558e2f03483' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:f82491e5-98a1-400e-8a51-9558e2f03483' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  861139bc-6749-4511-a7f1-40c4dc68e2d1: # Body
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Body
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  a851aec7-6100-4699-9194-adaed49b220a: # Card Name
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: cardName
+    instructions: null
+    name: 'Card Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f714129d-9105-4558-9586-deeea539208e: # Profession
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: profession
+    instructions: null
+    name: Profession
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

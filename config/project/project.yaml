@@ -1,0 +1,125 @@
+dateModified: 1659848398
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      disabled: false
+      key: 'section:493f7db2-3530-4a7b-952e-283878e196ce' # Invitations
+      tableAttributes:
+        - 'field:4f302a19-654e-48d4-9518-1ae2ccd57573' # First Name
+        - 'field:9ca9cd27-1a19-47c9-916f-782720416613' # Last Name
+        - postDate
+        - expiryDate
+        - link
+        - slug
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      key: 'section:19bc0725-d245-483d-81d4-0cc2824794c6' # Pages
+      type: native
+email:
+  fromEmail: joshparylak@gmail.com
+  fromName: Wedding
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  embeddedAssets:
+    hasUrls: true
+    name: 'Embedded Assets'
+    settings:
+      path: '@webroot/assets/embedded-assets'
+    type: craft\fs\Local
+    url: '@web/assets/embedded-assets'
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/images'
+    type: craft\fs\Local
+    url: '@web/assets/images'
+meta:
+  __names__:
+    0a6e0219-a9ce-400c-a495-c5fbf5cd02de: 'Embed Code' # Embed Code
+    0de2e1e2-2732-4aac-8f0a-fb498936c073: Wedding # Wedding
+    0e945f0d-08ea-4cd7-8fad-5c06abe512df: 'Content Builder' # Content Builder
+    1b163bc5-2ff8-434d-b9e0-d5efe913cbac: Icon # Icon
+    1d591009-3c3b-4cfa-954b-096a1f1b3bf3: 'Guest Numbers' # Guest Numbers
+    2c802d58-1f43-4be3-a93d-3e15ebee5438: Default # Default
+    3f3e21a4-4b9e-471d-9ed7-fa3296f18772: Home # Home
+    4b622811-5251-4ce2-9bb2-d3c1f700cfda: Birthday # Birthday
+    4f302a19-654e-48d4-9518-1ae2ccd57573: 'First Name' # First Name
+    05da216b-be7c-4a4c-9384-be63e565388a: Text # Text
+    6d170b95-7f68-4066-8073-d154f9022323: 'Social Media' # Social Media
+    07e56a7a-424e-423e-ad81-ae200eeab8bb: Copy # Copy
+    8cf6a49d-681d-463e-b6c2-e91f5666dfb8: Gallery # Gallery
+    9ac9d3fa-2774-40a7-a34a-11dc096d303b: Portrait # Portrait
+    9ca9cd27-1a19-47c9-916f-782720416613: 'Last Name' # Last Name
+    19bc0725-d245-483d-81d4-0cc2824794c6: Pages # Pages
+    051edfb9-871d-4481-a8c1-ff721b2f9bb0: Common # Common
+    55e1baef-f7f4-493b-82af-fff71afee760: Home # Home
+    80d22602-c51e-43fb-8fc1-7f1b75893575: 'Heading Alignment' # Heading Alignment
+    85e2664a-7de5-4c5b-a7d7-3f75425654cf: 'Nav Menu' # Nav Menu
+    87ed53b6-0680-4273-aec7-f8b4be63d9d5: Text # Text
+    368c2cee-5b8f-416d-81b8-84df2a611f67: 'Heading Text' # Heading Text
+    493f7db2-3530-4a7b-952e-283878e196ce: Invitations # Invitations
+    5836aa34-7573-4d5d-9b2f-0b6304f91187: 'Add a Card' # Add a Card
+    33917feb-bf7d-47bb-81e7-6b24915d0537: 'Menu Items' # Menu Items
+    38872d26-cb8e-4533-a846-4bb627cf00af: Embed # Embed
+    60685af4-cb8f-4820-ad90-e72dd1b9c473: 'Image Caption' # Image Caption
+    861139bc-6749-4511-a7f1-40c4dc68e2d1: Body # Body
+    11365751-5044-4261-ae59-9f4123f77100: 'Guest First Name' # Guest First Name
+    77430723-778d-42fe-aa44-2f718ae3c502: 'Image Position' # Image Position
+    a851aec7-6100-4699-9194-adaed49b220a: 'Card Name' # Card Name
+    b2b71e13-429e-4140-8341-1efd9f65cab2: Cards # Cards
+    b21c92b9-fd3d-4017-9cfc-7321a875b0c9: Invitation # Invitation
+    c2d8bb1b-341d-454d-8a16-de29aba57e60: Image/Text # Image/Text
+    c84e0e0d-48ee-4606-a1eb-df2226daedd4: Default # Default
+    cbd88d21-6c7e-4f0b-95f3-d924bbeda28a: 'Heading Size' # Heading Size
+    d0610d63-dc71-4764-9111-5d4fd6c6df6a: 'RSVP Form' # RSVP Form
+    dd49ea8c-0213-42d0-9ce8-0fac81230730: 'RSVP Form' # RSVP Form
+    e8ada950-6cd2-4961-9ab8-160d994fb6f7: Wedding # Wedding
+    f7c44e64-367d-4184-b2ca-9835d53c73f9: Image # Image
+    f446ef4e-afd6-4a05-8a8f-50350752562e: Images # Images
+    f661d16c-71ca-47ee-81a6-2e516527b73f: Heading # Heading
+    f82491e5-98a1-400e-8a51-9558e2f03483: Images # Images
+    f714129d-9105-4558-9586-deeea539208e: Profession # Profession
+    fad13438-e92b-4b4b-bbfa-38cb5fa5ce35: Globals # Globals
+    fed9fa65-5e19-4424-b2d3-c0b7c4b282fb: 'Guest Last Name' # Guest Last Name
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  ui-element-fields:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: Wedding
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

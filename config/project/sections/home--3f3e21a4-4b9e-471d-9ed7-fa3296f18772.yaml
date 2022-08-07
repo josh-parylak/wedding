@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: home
+name: Home
+propagationMethod: all
+siteSettings:
+  e8ada950-6cd2-4961-9ab8-160d994fb6f7: # Wedding
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_entry
+    uriFormat: __home__
+type: single
