@@ -1,0 +1,87 @@
+{% extends '_layouts' %}
+{% set message = craft.app.session.getFlash('notice') %}
+
+
+{% block content %}
+    {#{ sprig('rsvp/_form') }}
+
+    {{ sprig.script }#}
+    {% if message|length > 0 %}
+        <div class="flash-notice">
+            {{message}}
+        </div>
+    {% endif %}
+    {% macro errorList(errors) %}
+        {% if errors %}
+            {{ ul(errors, {class: 'errors'}) }}
+        {% endif %}
+    {% endmacro %}
+
+    {# If there were any validation errors, an `entry` variable will be 
+    passed to the template, which contains the posted values 
+    and validation errors. If that’s not set, we’ll default 
+    to a new entry. #}
+    {% set entry = entry ?? create('craft\\elements\\Entry') %}
+
+    {# Add `enctype="multipart/form-data"` to `<form>` if you’re 
+    uploading files. #}
+    <div class="form-wrapper">
+        <form id="rsvp-form" method="post" accept-charset="UTF-8">
+            {{ csrfInput() }}
+            {{ actionInput('guest-entries/save') }}
+            {{ hiddenInput('sectionId', '3') }}
+            {{ hiddenInput('enabled', '1') }}
+            {{ hiddenInput('entryId', entry.id) }}
+
+            <legend>Guest #1</legend>
+            <div class="input-row">
+                <label for="firstName">First Name</label>
+                {{ input('text', 'fields[firstName]', entry.firstName, {
+                    id: 'firstName',
+                }) }}
+                {{ _self.errorList(entry.getErrors('firstName')) }}
+            </div>
+            <div class="input-row">
+                <label for="lastName">Last Name</label>
+                {{ input('text', 'fields[lastName]', entry.lastName, {
+                    id: 'lastName',
+                }) }}
+                {{ _self.errorList(entry.getErrors('lastName')) }}
+            </div>
+            {% if entry.guestFirstName and entry.guestLastName %}
+                <legend>Guest #2</legend>
+                <div class="input-row">
+                    <label for="guestFirstName">First Name</label>
+                    {{ input('text', 'fields[guestFirstName]', entry.guestFirstName, {
+                        id: 'guestFirstName',
+                    }) }}
+                    {{ _self.errorList(entry.getErrors('guestFirstName')) }}
+                </div>
+                <div class="input-row">
+                    <label for="guestLastName">Last Name</label>
+                    {{ input('text', 'fields[guestLastName]', entry.guestLastName, {
+                        id: 'guestLastName',
+                    }) }}
+                    {{ _self.errorList(entry.getErrors('guestLastName')) }}
+                </div>
+            {% endif %}
+
+            <legend>Guests By Age</legend>
+            {% for row in entry.guestNumbers %}
+                <div class="input-row {{ row.invited == 0 ? 'hide' }}">
+                    <label for="confirmed-{{loop.index0}}">Guests {{row.guestsByAge}}</label>
+                    {{ input(row.invited > 0 ? 'number' : 'hidden', 'fields[guestNumbers][' ~ loop.index0 ~'][col3]', row.confirmed != '' ? row.confirmed : row.invited, {
+                        id: 'confirmed-' ~ loop.index0,
+                        max: row.invited
+                    }) }}
+                    {{ input('hidden', 'fields[guestNumbers][' ~ loop.index0 ~'][col1]', row.guestsByAge) }}
+                    {{ input('hidden', 'fields[guestNumbers][' ~ loop.index0 ~'][col2]', row.invited) }}
+                </div>
+            {% endfor %}
+
+            <div class="button-row">
+                <input type="submit" value="Save" class="btn"></input>
+            </div>
+        </form>
+    </div>
+{% endblock %}

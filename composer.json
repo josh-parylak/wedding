@@ -2,10 +2,12 @@
   "require": {
     "carlcs/craft-uielementfields": "2.0.2",
     "craftcms/cms": "^4.2.0.2",
+    "craftcms/guest-entries": "3.0.1",
     "craftcms/redactor": "3.0.2",
     "putyourlightson/craft-sprig": "2.1.0",
     "verbb/super-table": "3.0.0",
-    "vlucas/phpdotenv": "^5.4.0"
+    "vlucas/phpdotenv": "^5.4.0",
+    "xpertbot/craft-wheelform": "3.1.2"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"

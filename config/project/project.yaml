@@ -1,4 +1,4 @@
-dateModified: 1659848398
+dateModified: 1659915993
 elementSources:
   craft\elements\Entry:
     -
@@ -95,6 +95,34 @@ meta:
     fad13438-e92b-4b4b-bbfa-38cb5fa5ce35: Globals # Globals
     fed9fa65-5e19-4424-b2d3-c0b7c4b282fb: 'Guest Last Name' # Guest Last Name
 plugins:
+  guest-entries:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
+    settings:
+      enableCsrfProtection: '1'
+      entryVariable: entry
+      sections:
+        __assoc__:
+          -
+            - 493f7db2-3530-4a7b-952e-283878e196ce # Invitations
+            -
+              __assoc__:
+                -
+                  - sectionUid
+                  - 493f7db2-3530-4a7b-952e-283878e196ce # Invitations
+                -
+                  - allowGuestSubmissions
+                  - '1'
+                -
+                  - enabledByDefault
+                  - '1'
+                -
+                  - runValidation
+                  - ''
+                -
+                  - authorUid
+                  - d27edc5d-c7cf-400c-ab2c-dd55ef36498a
   redactor:
     edition: standard
     enabled: true
@@ -111,6 +139,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  wheelform:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
 system:
   edition: solo
   live: true

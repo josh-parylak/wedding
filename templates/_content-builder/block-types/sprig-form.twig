@@ -54,11 +54,13 @@
                         <th>Confirmed Attending</th>
                     </tr>
                     {% for row in result.guestNumbers %}
-                        <tr>
-                            <td>{{ row.guestsByAge }}</td>
-                            <td>{{ row.invited }}</td>
-                            <td>{{ row.confirmed }}</td>
-                        </tr>
+                        {% if row.invited > 0 %}
+                            <tr>
+                                <td>{{ row.guestsByAge }}</td>
+                                <td>{{ row.invited }}</td>
+                                <td>{{ row.confirmed }}</td>
+                            </tr>
+                        {% endif %}
                     {% endfor %}
                 </table>
             </div>

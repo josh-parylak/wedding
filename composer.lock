@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c4b85d65f23ab6af3bdd6dcdb40e5f9",
+    "content-hash": "246b9bf3f3e465bf3c7b6ac061db9944",
     "packages": [
         {
             "name": "carlcs/craft-uielementfields",
@@ -581,6 +581,55 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
             "time": "2022-07-27T19:39:59+00:00"
+        },
+        {
+            "name": "craftcms/guest-entries",
+            "version": "3.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/guest-entries/zipball/0faa5190ccbeb0d880134044fddf76a4f53cf1a2",
+                "reference": "0faa5190ccbeb0d880134044fddf76a4f53cf1a2",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0-RC3"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Guest Entries",
+                "handle": "guest-entries",
+                "documentationUrl": "https://github.com/craftcms/guest-entries/blob/v2/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\guestentries\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "This plugin allows you to save guest entries from the front-end of your website.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "entries",
+                "guest",
+                "yii2"
+            ],
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/guest-entries/issues?state=open",
+                "source": "https://github.com/craftcms/guest-entries",
+                "docs": "https://github.com/craftcms/guest-entries/blob/v2/README.md",
+                "rss": "https://github.com/craftcms/guest-entries/commits/v2.atom"
+            },
+            "time": "2022-05-12T04:14:21+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -4809,6 +4858,58 @@
                 "graphql"
             ],
             "time": "2022-04-13T16:25:32+00:00"
+        },
+        {
+            "name": "xpertbot/craft-wheelform",
+            "version": "3.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xpertbot/craft-wheelform/zipball/87b52fd099f95bb6b788b7d4f6b8bd71b3b2b42b",
+                "reference": "87b52fd099f95bb6b788b7d4f6b8bd71b3b2b42b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0-alpha"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Wheel Form",
+                "handle": "wheelform",
+                "hasCpSettings": true,
+                "hasCpSection": true,
+                "changelogUrl": "https://github.com/xpertbot/craft-wheelform/CHANGELOG.md",
+                "components": {
+                    "mailer": "Wheelform\\Mailer"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "wheelform\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wheel Interactive",
+                    "homepage": "https://wheelinteractive.com"
+                }
+            ],
+            "description": "Craft CMS 4 Form administrator with Database integration",
+            "keywords": [
+                "Wheel Form",
+                "WheelForm",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/xpertbot/craft-wheelform/blob/master/README.md",
+                "issues": "https://github.com/xpertbot/craft-wheelform/issues"
+            },
+            "time": "2022-08-06T15:40:44+00:00"
         },
         {
             "name": "yiisoft/yii2",

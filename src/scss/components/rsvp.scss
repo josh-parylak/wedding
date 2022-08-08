@@ -33,11 +33,23 @@
             margin: 1rem 0 0;
             background-color: $accent;
         }
+
+        legend {
+            font-family: $sansAlt;
+            font-size: 1.5rem;
+            color: $white;
+        }
+
         .input-row {
             position: relative;
             display: flex;
             gap: 1rem;
             align-items: center;
+
+            &.hide {
+                display: none;
+            }
+            
             label {
                 font-family: $sans;
                 color: $white;
@@ -160,4 +172,12 @@
         font-size: 1.25rem;
         margin: 2rem 0;
     }
+}
+
+.flash-notice {
+    background-color: $accent;
+    border:2px solid $primary;
+    font-family: $sans;
+    padding: 1rem;
+    margin: 0 0 2rem;
 }
